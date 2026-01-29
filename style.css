@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+:root {
+    --accent-code: 57, 156, 255;
+    --accent: rgb(var(--accent-code));
+}
+@font-face {
+    font-family: 'Seven';
+    src: url(/TRUEMonospacedSevenSegment.ttf);
+}
+body, html {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(42, 42, 42);
+    height: 100%;
+    width: 100%;
+    transition: all 0.5s;
+}
+.box {
+    font-size: 24px;
+    height: 150px;
+    width: 150px;
+    border: solid 3px black;
+    background: white;
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border: 3px solid black;
+}
+.dragging {
+    opacity: 0.7;
+}
+.box.drag-over {
+    background-color: rgb(137, 137, 137);
+}
+.box.drag-over .content {
+    opacity: 0;
+}
